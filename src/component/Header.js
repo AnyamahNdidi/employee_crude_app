@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import {NavLink} from "react-router-dom"
-import "./header.css"
+
+
 
 function Header() {
   return (
@@ -9,10 +10,11 @@ function Header() {
       <Wrapper>
         <Logo/>
         <Navigation>
-            < Nav to=""  activeClassName=""     >Home</Nav>
+            < Nav to=""  activeClassName="active"     >Home</Nav>
             < Nav to="/about">About</Nav>
-            < Nav to="/Todo">Todo</Nav>
-           
+            < Nav to="/todo">Todo</Nav>
+            < Nav to="/test2">Test2</Nav>
+            < Nav to="/test1">Test1</Nav>
 
         </Navigation>
       </Wrapper>
@@ -35,9 +37,21 @@ padding: 15px;
 display: flex;
 justify-content: center;
 align-items: center;
-color: white;
+color:  #e6e6ea;
 text-decoration: none;
 
+
+&.active{
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e6e6ea;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #fe4a49;
+  height: 20px;
+}
 :hover{
   cursor: pointer;
   background-color:grey;
@@ -48,7 +62,7 @@ text-decoration: none;
 const Container = styled.div`
 height: 80px;
 width: 100%;
-background-color: #0070B8;
+background-color: #2ab7ca ;
 `
 const Wrapper = styled.div`
 display: flex;
